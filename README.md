@@ -23,6 +23,8 @@ Users should be able to:
 - See a hover state on desktop for the Sign Up call-to-action
 
 ### Screenshot
+![127 0 0 1_5500_index html](https://github.com/avinash4364/single-price-grid-component/assets/24203618/0ad2a00c-0288-41ee-b7c2-152af8a7661a)
+![127 0 0 1_5500_index html (1)](https://github.com/avinash4364/single-price-grid-component/assets/24203618/e631362b-1944-4cd7-a42d-b6d44868563d)
 
 ### Links
 
