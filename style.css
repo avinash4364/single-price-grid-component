@@ -1,0 +1,163 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-gray);
+  justify-content: center;
+}
+
+button {
+  background: none;
+  font-family: inherit;
+  border: none;
+  color: inherit;
+}
+
+.price-grid {
+  display: grid;
+  max-width: 32rem;
+  max-height: 90%;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas:
+    'first'
+    'second'
+    'third';
+  border-radius: 7px;
+  box-shadow: 0px 8px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 12px 22px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.component {
+  padding: 2rem 2.4rem;
+  color: var(--light-gray);
+}
+
+.community-component {
+  grid-area: first;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.component-heading {
+  padding-bottom: 2rem;
+}
+
+.community-heading {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.money-back {
+  color: var(--bright-yellow);
+  font-weight: 700;
+  padding-bottom: 1.6rem;
+}
+
+.community-desc {
+  color: var(--grayish-blue);
+  font-size: 1.4rem;
+  line-height: 2;
+  padding-right: 1rem;
+}
+
+.subscription-component {
+  grid-area: second;
+  background-color: var(--cyan);
+}
+
+.subscription-heading {
+  font-size: 2rem;
+  color: hsl(204, 43%, 100%);
+}
+
+.subscription-price {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: hsla(203, 44%, 93%, 0.5);
+}
+
+.subscription-price span {
+  font-size: 3.2rem;
+  opacity: 1;
+  font-weight: 700;
+  color: hsl(204, 43%, 100%);
+}
+
+.subscription-offer {
+  padding: 1rem 0 2rem 0;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 1.6rem 0;
+  color: hsl(204, 43%, 100%);
+  font-weight: 700;
+  border-radius: 7px;
+  font-size: 1.4rem;
+  background-color: var(--bright-yellow);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.reason-component {
+  grid-area: third;
+  background-color: hsl(179, 62%, 46%);
+}
+
+.reason-heading {
+  font-size: 2rem;
+  color: hsl(204, 43%, 100%);
+}
+
+.reason-text {
+  line-height: 1.5;
+  padding-right: 4rem;
+  opacity: 0.9;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+  .price-grid {
+    max-width: 64rem;
+    grid-template-areas:
+      'first first'
+      'second third';
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .component {
+    padding: 4.4rem 3.2rem;
+  }
+
+  .community-desc {
+    font-size: 1.6rem;
+  }
+
+  .subscription-offer {
+    padding: 1rem 0 2.4rem 0;
+  }
+}
